@@ -1,11 +1,24 @@
-/* Fix the function
-I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+/* write me a function stringy that takes a size and returns a string of alternating 1s and 0s.
 
-Can you help me fix the function?
+the string should start with a 1.
+
+a string with size 6 should return :'101010'.
+
+with size 4 should return : '1010'.
+
+with size 12 should return : '101010101010'.
+
+The size will always be positive and will only use whole numbers.
 
 Solution*/
 
-function addFive(num) {
-    var total = num + 5
-    return total
+function stringy(size) {
+  let out = ''
+  while (out.length<size) {
+    out+="1"
+    if (out.length<size) {
+      out+="0"
+    }
   }
+  return out
+}
