@@ -8,7 +8,7 @@ Examples
 [1, 1, 2] ==> 2
 [17, 17, 3, 17, 17, 17, 17] ==> 3
 
-Solution*/
+Solution1 */
 
 function stray(numbers) {
     for (let i=1;i<numbers.length-1;i++) {
@@ -17,4 +17,11 @@ function stray(numbers) {
         }
     }
    return numbers[0]!==numbers[1] ? numbers[0] : numbers[numbers.length-1]
+  }
+
+// Solution2
+
+  function stray(numbers) {
+    numbers = numbers.sort()
+    return numbers[0]==numbers[1]?numbers[numbers.length-1]:numbers[0]
   }
